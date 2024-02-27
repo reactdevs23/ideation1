@@ -1,0 +1,166 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+.reverse {
+  position: absolute;
+  width: 440px;
+  top: calc(100% - 30px);
+  border-left: 0;
+  right: 175px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.reverse .labelContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.reverse .label {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  bottom: 0;
+  color: var(--color);
+  text-align: center;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+}
+.step,
+.stepsContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+.content {
+  position: relative;
+}
+.pointIcon,
+.firstArrow,
+.arrow {
+  position: relative;
+  z-index: 2;
+}
+.topContent {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, calc(-100% - 20px));
+  width: 169px;
+  min-width: 100%;
+}
+.mainDiv .topContent {
+  transform: translate(-50%, calc(-100% - 40px));
+}
+.mainDiv .bottomContent {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, calc(50% + 80px));
+  width: 169px;
+  min-width: 100%;
+}
+.topContent .circle,
+.bottomContent .circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+.bottomContent .circle {
+  flex-direction: column-reverse;
+}
+.topContent .circle::before {
+  content: "";
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: var(--bg);
+  position: absolute;
+  top: 100%;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.mainDiv .content {
+  position: relative;
+  z-index: 1;
+}
+.mainDiv .content::before {
+  content: "";
+  width: 170px;
+  aspect-ratio: 1/1;
+  background: var(--innerCircleBg);
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.mainDiv .content::after {
+  content: "";
+  width: 267px;
+  aspect-ratio: 1/1;
+  background: var(--outerCircleBg);
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+.topContent .title,
+.bottomContent .title {
+  text-align: center;
+  color: var(--color);
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+}
+.bottomContent .title {
+  white-space: nowrap;
+}
+.userContainer {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(calc(-50% - 85px), calc(100% + 70px));
+
+  max-width: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.userContainer .info {
+  color: var(--color);
+  text-align: center;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
