@@ -20,8 +20,8 @@ function App() {
     fontFamily: "'Noto Sans', sans-serif",
     mainBg: "#fff",
     pointIcon: <PointIcon bg="#F63D68" borderColor="#F2F4F7" />,
-    arrow: <Arrow />,
-    firstArrow: <FirstArrow />,
+    arrow: <Arrow color="#000" />,
+    firstArrow: <FirstArrow color="#000" />,
     step1: {
       duty: [
         {
