@@ -96,6 +96,7 @@ function App() {
     },
 
     loopBack: {
+      show: true,
       label: "Rewarding system",
       color: "#000",
       arrow: <ReverseArrow color="#000" />,

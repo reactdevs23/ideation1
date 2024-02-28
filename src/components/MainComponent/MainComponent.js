@@ -145,17 +145,19 @@ const MainComponent = ({
               </p>
             </div>
           </div>
-          <div className={classes.reverse}>
-            <div className={classes.reverseArrow}>{loopBack.arrow}</div>
-            <div classes={classes.labelContainer}>
-              <p
-                className={classes.label}
-                style={{ "--color": loopBack.labelColor }}
-              >
-                {loopBack.label}
-              </p>
+          {loopBack && loopBack.show && (
+            <div className={classes.reverse}>
+              <div className={classes.reverseArrow}>{loopBack.arrow}</div>
+              <div classes={classes.labelContainer}>
+                <p
+                  className={classes.label}
+                  style={{ "--color": loopBack.labelColor }}
+                >
+                  {loopBack.label}
+                </p>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
